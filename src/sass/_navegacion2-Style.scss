@@ -1,0 +1,115 @@
+.principal{
+    header{
+        position: relative;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 10px;
+        background: #fff;
+        box-sizing: border-box;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    }
+
+    
+    header nav {
+        float: right; //me posiciona todo lo que esta en el NAV del menu a la derecha
+    }
+
+    header nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li{
+            list-style: none;
+
+            a {
+                display: block;
+                margin: 10px 0;
+                padding: 10px 20px;
+                text-decoration: none;
+                color: #262626;
+
+                &.active, &:hover{
+                    background: #069370;
+                    color: #fff;
+                    transition: 0.5s 
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 1200px){
+
+    .principal{
+        header{
+            margin: 20px;  //esto me pone los bordes a cada lado de la Caja Blanca que encierra el menu
+        }
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .menu-toggle{
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        background: #ccc;
+        float: right;
+        cursor: pointer;
+
+        text-align: center;
+        font-size: 30px;
+        color: #069370;
+
+    }
+    //Investigar para que sirve el BEFORE
+    .menu-toggle::before{
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+        
+    }
+
+    .principal{
+        header nav{
+            display:none;
+
+            &.active{
+                display: block;
+                width: 100%;
+                ul{
+                    display: block;
+
+                    li {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.logo{
+    color: #069370;
+    height: 0px;
+    font-size: 36px;
+
+    line-height: 60px;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+.clearFix{
+    clear: both;//Me vuelve a posicionar todo dentro del recuadro blanco
+}

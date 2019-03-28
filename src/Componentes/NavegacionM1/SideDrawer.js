@@ -3,9 +3,12 @@ import React, { Component } from 'react';
 class SideDrawer extends Component {
 
   render() {
+    let drawerClasses= 'side-drawer';
+    if(this.props.show)
+      drawerClasses= 'side-drawer open'
     return (
       <div>
-        <nav className="side-drawer">
+        <nav className={drawerClasses}>
             <ul>
                 <li><a href="/">Productos</a></li>
                 <li><a href="/">Usuarios</a></li>

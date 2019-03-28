@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import DrawerToggleButton from './DrawerToggleButton'
 class Navegacion extends Component {
-
+  constructor(props){
+    super(props);
+  }
   render() {
     return (
       <div>
         <header className="toolbar">
             <nav className="toolbar__navigation">
-                <div>
-                    <DrawerToggleButton/>
+                <div className="toolbar__toggle-button">
+                    <DrawerToggleButton click={this.props.drawerClickHandler}/>
                 </div>
                 <div className="toolbar__logo">
                     <a href="/">Logo</a>

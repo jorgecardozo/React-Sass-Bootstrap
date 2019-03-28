@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
-import PruebaStyle from './Componentes/PruebaStyle'
-import Navegacion from './Componentes/Navegacion';
-import SideDrawer from './Componentes/SideDrawer';
-import Backdrop from './Componentes/Backdrop';
+//import PruebaStyle from './Componentes/PruebaStyle'
+import Navegacion from './Componentes/NavegacionM2/Navegacion';
+
+// import Main from './Componentes/NavegacionM1/Main';
 
 class App extends Component {
+
   render() {
     return (
-      <div style={{height: '100%'}}>
-         {/* <PruebaStyle/> */}
+      <div>
+        {/* <Main/>  */}
         <Navegacion/>
-        <SideDrawer/>
-        <Backdrop/>
-        <main style={{marginTop: '64px'}}>
-          <p>Este es el primer parrafo de toda la oración</p>
-        </main>
-
-        
       </div>
     );
   }
