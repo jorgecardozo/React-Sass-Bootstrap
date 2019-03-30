@@ -44,6 +44,7 @@
                 display: none;//NONE esto es para que los menu desplegables no aparaezcan, y solo aparezca el principal
                 position: absolute;
                 background: #fff;
+
                 li{
                     list-style: none;
         
@@ -81,6 +82,7 @@
     .principal{
         header{
             margin: 20px;  //esto me pone los bordes a cada lado de la Caja Blanca que encierra el menu
+        
         }
     }
 
@@ -110,6 +112,10 @@
         
     }
 
+    .menu-toggle.active::before{
+        content: '\f00d';
+    }
+
     .principal{
         header nav{
             display:none;
@@ -127,6 +133,12 @@
             }
         }
     }
+
+    //esto es para que desde un Movil se oculte el menu desplegable
+    .principal header nav ul li:hover .subMenu{
+        //background: #262626;
+        display:inline;
+    }    
 
 }
 

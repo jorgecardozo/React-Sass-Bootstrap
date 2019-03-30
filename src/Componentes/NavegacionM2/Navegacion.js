@@ -22,7 +22,7 @@ class Navegacion extends Component {
         <header >
             
           <a href="/" className="logo">Logo</a>
-          <Toggle click={this.handleClick}/>
+          <Toggle click={this.handleClick} open={this.state.open}/>
           {/* <div className="menu-toggle" onClick={this.props.click}></div> */}
           {this.state.open ? console.log("abierto") : console.log("cerrado")}
           {this.state.open ?
@@ -30,13 +30,13 @@ class Navegacion extends Component {
               <ul className="menu">
                   <li><a href="/" className="active"> Home </a>
                     <ul className="subMenu">
-                      <li><a href="/">Te</a></li>
-                      <li><a href="/">Amo</a></li>
-                      <li><a href="/">Celee</a></li>
+                      <li><a href="/">Primero</a></li>
+                      <li><a href="/">Segundo</a></li>
+                      <li><a href="/">Tercero</a></li>
                     </ul>
                   </li>
                   <li><a href="/"> About </a>
-                    
+                     
                   </li>
                   <li><a href="/"> Services </a>
                         <ul className="subMenu">
