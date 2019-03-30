@@ -35,10 +35,45 @@
                     color: #fff;
                     transition: 0.5s 
                 }
+                
+            }
+
+           
+            
+            .subMenu{
+                display: none;//esto es para que los menu desplegables no aparaezcan, y solo a´pparezca el principal
+                position: absolute;
+                background: #fff;
+                li{
+                    list-style: none;
+        
+                    a {
+                        //display: block;
+                        margin: 0;
+                        padding: 10px 10px;
+                        text-decoration: none;
+                        color: #262626;
+        
+                        &.active, &:hover{
+                            background: #069370;
+                            color: #fff;
+                            transition: 0.5s 
+                        }
+                    
+                    }
+                   
+                }
+
             }
         }
     }
     
+}
+//Esto es para cuando se haga hover sobre cada menu principal se despluegue cada menu secundario
+.principal header nav ul li:hover{
+    .subMenu{
+        display: block;
+    }
 }
 
 @media (max-width: 1200px){
